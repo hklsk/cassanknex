@@ -390,7 +390,7 @@ function _compileOrder(client, orderByStatements) {
     orderBy.push(formatter.wrapQuotes(statement.column) + " " + statement.order);
   });
 
-  cql += orderBy.join(" ");
+  cql += orderBy.join(", ");
 
   return cql;
 }
